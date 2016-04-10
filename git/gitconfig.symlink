@@ -14,6 +14,7 @@
         reup = rebase-update # depot_tools specific
 
 [core]
+        untrackedCache = true # https://news.ycombinator.com/item?id=11388479
         excludesfile = ~/.gitignore
         attributesfile = ~/.gitattributes
 
@@ -45,8 +46,8 @@
         local = yellow
         remote = green
 [color "status"]
-        added = yellow
-        changed = green
+        added = green
+        changed = yellow
         untracked = cyan
 
 # git mergetool
@@ -79,7 +80,7 @@
         path = ~/.gitconfig.local
 
 [init]
-        templatedir = ~/.git_template
+        # templatedir = ~/.git_template
 
 [filter "lfs"]
         clean = git-lfs clean %f
