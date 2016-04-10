@@ -5,4 +5,4 @@ export NODE_REPL_HISTORY_SIZE='32768';
 # Use sloppy mode by default, matching web browsers.
 export NODE_REPL_MODE='sloppy';
 
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+# NVM is sourced by prezto (https://github.com/sorin-ionescu/prezto/tree/master/modules/node)
