@@ -1,2 +1,11 @@
+# private files
 git/gitconfig.local.symlink
 private
+
+# folder view config files
+.DS_Store
+
+# working files
+.vim/viminfo
+.vim/swaps/*
+.vim/undo
