@@ -28,6 +28,11 @@ brew 'unrar'
 brew 'vim', args: ['override-system-vi']
 brew 'wget', args: ['with-iri']
 brew 'zopfli'
+brew 'zsh'
+
+# Just for fun
+brew 'cowsay'
+brew 'fortune'
 
 cask 'dropbox'
 cask 'firefox'
