@@ -17,36 +17,37 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # General UI/UX                                                               #
 ###############################################################################
 
+
 # Menu bar: disable transparency
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
+# defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
 # Set standby delay to 24 hours (default is 1 hour)
-sudo pmset -a standbydelay 86400
+# sudo pmset -a standbydelay 86400
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
 # Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
+# defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Menu bar: hide the Time Machine, Volume, and User icons
-for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
-    defaults write "${domain}" dontAutoLoad -array \
-        "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-        "/System/Library/CoreServices/Menu Extras/Volume.menu" \
-        "/System/Library/CoreServices/Menu Extras/User.menu"
-done
-defaults write com.apple.systemuiserver menuExtras -array \
-    "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-    "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
-    "/System/Library/CoreServices/Menu Extras/Battery.menu" \
-    "/System/Library/CoreServices/Menu Extras/Clock.menu"
+# for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
+#     defaults write "${domain}" dontAutoLoad -array \
+#         "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+#         "/System/Library/CoreServices/Menu Extras/Volume.menu" \
+#         "/System/Library/CoreServices/Menu Extras/User.menu"
+# done
+# defaults write com.apple.systemuiserver menuExtras -array \
+#     "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+#     "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+#     "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+#     "/System/Library/CoreServices/Menu Extras/Clock.menu"
 
 # Set highlight color to green
-defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
+# defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.568600"
 
 # Set sidebar icon size to medium
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
+# defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 2
 
 # Always show scrollbars
 # defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
@@ -98,7 +99,6 @@ defaults write com.apple.helpviewer DevMode -bool true
 # Fix for the ancient UTF-8 bug in QuickLook (https://mths.be/bbo)
 # Commented out, as this is known to cause problems in various Adobe apps :(
 # See https://github.com/mathiasbynens/dotfiles/issues/237
-#echo "0x08000100:0" > ~/.CFUserTextEncoding
 
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
@@ -108,7 +108,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 sudo systemsetup -setrestartfreeze on
 
 # go into computer sleep mode after 20min
-sudo systemsetup -setcomputersleep 20
+sudo systemsetup -setcomputersleep 20 > /dev/null
 
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -117,10 +117,10 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 # Disable smart quotes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+# defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 
 # Disable smart dashes as they’re annoying when typing code
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+# defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
 # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
@@ -131,6 +131,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
+
 
 # Disable local Time Machine snapshots
 sudo tmutil disablelocal
@@ -152,16 +153,17 @@ sudo pmset -a sms 0
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
 
+
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Trackpad: map bottom right corner to right-click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+# defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+# defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
 # Disable “natural” (Lion-style) scrolling
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
@@ -170,16 +172,15 @@ defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
 # mute all sounds, incl volume change feedback
-defaults write "com.apple.sound.beep.feedback" -int 0
-defaults write com.apple.systemsound 'com.apple.sound.beep.volume' -float 0
-defaults write "com.apple.systemsound" "com.apple.sound.uiaudio.enabled" -int 0
+# defaults write "com.apple.sound.beep.feedback" -int 0
+# defaults write com.apple.systemsound 'com.apple.sound.beep.volume' -float 0
+# defaults write "com.apple.systemsound" "com.apple.sound.uiaudio.enabled" -int 0
 
 # Enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 
 # Enable access for assistive devices
-echo -n 'a' | sudo tee /private/var/db/.AccessibilityAPIEnabled > /dev/null 2>&1
 sudo chmod 444 /private/var/db/.AccessibilityAPIEnabled
 # TODO: avoid GUI password prompt somehow (http://apple.stackexchange.com/q/60476/4408)
 #sudo osascript -e 'tell application "System Events" to set UI elements enabled to true'
@@ -193,7 +194,7 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool false
 defaults write com.apple.universalaccess 'closeViewSmoothImages' -bool false
 
 # Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
@@ -212,7 +213,7 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool true
 
 
 # Stop iTunes from responding to the keyboard media keys
-launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
+# launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
 
 ###############################################################################
 # Screen                                                                      #
@@ -226,7 +227,7 @@ defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 defaults write com.apple.screencapture type -string "png"
 
 # Hide all desktop icons because who need 'em'
-defaults write com.apple.finder CreateDesktop -bool false
+# defaults write com.apple.finder CreateDesktop -bool false
 
 # Disable shadow in screenshots
 defaults write com.apple.screencapture disable-shadow -bool true
@@ -338,6 +339,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
 
+
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
@@ -431,6 +433,7 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulat
 # Safari & WebKit                                                             #
 ###############################################################################
 
+
 # Privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
@@ -481,6 +484,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Mail                                                                        #
 ###############################################################################
 
+
 # Disable send and reply animations in Mail.app
 defaults write com.apple.mail DisableReplyAnimations -bool true
 defaults write com.apple.mail DisableSendAnimations -bool true
@@ -505,6 +509,7 @@ defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnab
 ###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
+
 
 # Hide Spotlight tray-icon (and subsequent helper)
 #sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
@@ -554,6 +559,7 @@ sudo mdutil -E / > /dev/null
 # Terminal & iTerm 2                                                          #
 ###############################################################################
 
+
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
@@ -563,15 +569,13 @@ defaults write com.apple.terminal StringEncodings -array 4
 #defaults write com.apple.terminal FocusFollowsMouse -bool true
 #defaults write org.x.X11 wm_ffm -bool true
 
-# Install the Solarized Dark theme for iTerm
-open "${HOME}/init/Solarized Dark.itermcolors"
-
-# Don’t display the annoying prompt when quitting iTerm
+# Don’t display the annoying prompt when quiting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
+
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
@@ -583,6 +587,7 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 # Activity Monitor                                                            #
 ###############################################################################
 
+
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
 
@@ -593,12 +598,12 @@ defaults write com.apple.ActivityMonitor IconType -int 5
 defaults write com.apple.ActivityMonitor ShowCategory -int 0
 
 # Sets columns for all tabs
-defaults read com.apple.ActivityMonitor "UserColumnsPerTab v5.0" -dict \
-    '0' '( Command, CPUUsage, CPUTime, Threads, PID, UID, Ports )' \
-    '1' '( Command, ResidentSize, Threads, Ports, PID, UID,  )' \
-    '2' '( Command, PowerScore, 12HRPower, AppSleep, UID, powerAssertion )' \
-    '3' '( Command, bytesWritten, bytesRead, Architecture, PID, UID, CPUUsage )' \
-    '4' '( Command, txBytes, rxBytes, PID, UID, txPackets, rxPackets, CPUUsage )'
+# defaults read com.apple.ActivityMonitor "UserColumnsPerTab v5.0" -dict \
+#     '0' '( Command, CPUUsage, CPUTime, Threads, PID, UID, Ports )' \
+#     '1' '( Command, ResidentSize, Threads, Ports, PID, UID,  )' \
+#     '2' '( Command, PowerScore, 12HRPower, AppSleep, UID, powerAssertion )' \
+#     '3' '( Command, bytesWritten, bytesRead, Architecture, PID, UID, CPUUsage )' \
+#     '4' '( Command, txBytes, rxBytes, PID, UID, txPackets, rxPackets, CPUUsage )'
 
 # Set sort column
 defaults write com.apple.ActivityMonitor UserColumnSortPerTab -dict \
@@ -618,6 +623,7 @@ defaults write com.apple.ActivityMonitor NetworkGraphType -int 1
 ###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #
 ###############################################################################
+
 
 # Enable the debug menu in Address Book
 defaults write com.apple.addressbook ABShowDebugMenu -bool true
@@ -642,6 +648,7 @@ defaults write com.apple.DiskUtility advanced-image-options -bool true
 # Mac App Store                                                               #
 ###############################################################################
 
+
 # Enable the WebKit Developer Tools in the Mac App Store
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 
@@ -651,6 +658,7 @@ defaults write com.apple.appstore ShowDebugMenu -bool true
 ###############################################################################
 # Messages                                                                    #
 ###############################################################################
+
 
 # Disable automatic emoji substitution (i.e. use plain text smileys)
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
@@ -664,6 +672,7 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 ###############################################################################
 # Google Chrome & Google Chrome Canary                                        #
 ###############################################################################
+
 
 # Allow installing user scripts via GitHub Gist or Userscripts.org
 defaults write com.google.Chrome ExtensionInstallSources -array "https://gist.githubusercontent.com/" "http://userscripts.org/*"
@@ -690,6 +699,7 @@ defaults write com.google.Chrome.canary PMPrintingExpandedStateForPrint2 -bool t
 # Twitter.app                                                                 #
 ###############################################################################
 
+
 # Disable smart quotes as it’s annoying for code tweets
 defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
 
@@ -715,9 +725,11 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 # Kill affected applications                                                  #
 ###############################################################################
 
+
 for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
     "Dock" "Finder" "Google Chrome" "Google Chrome Canary" "Mail" "Messages" \
     "Opera" "Safari" "SizeUp" "SystemUIServer" "Terminal" "Twitter" "iCal"; do
     killall "${app}" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
+
