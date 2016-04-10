@@ -5,7 +5,7 @@ then
     git clone https://github.com/creationix/nvm.git ~/.nvm > /dev/null && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags` > /dev/null
 else
     echo "attempting to update nvm"
-    cd "$NVM_DIR" && git pull origin master > /dev/null && git checkout `git describe --abbrev=0 --tags` >/dev/null
+    cd "$NVM_DIR" && git pull origin master > /dev/null && git checkout `git describe --abbrev=0 --tags` > /dev/null
 fi;
 
 cd -
