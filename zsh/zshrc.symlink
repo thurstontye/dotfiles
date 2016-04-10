@@ -46,3 +46,6 @@ do
 done
 
 unset config_files
+
+# enable fasd https://github.com/clvv/fasd
+eval "$(fasd --init auto)"

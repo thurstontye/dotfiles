@@ -8,6 +8,7 @@ tap 'homebrew/dupes'
 brew 'bash'
 brew 'diff-so-fancy'
 brew 'coreutils'
+brew 'fasd'
 brew 'findutils'
 brew 'gnu-sed', args: ['default-names']
 brew 'go'
