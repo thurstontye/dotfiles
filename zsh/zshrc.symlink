@@ -13,6 +13,7 @@ then
 fi
 
 setopt extendedglob
+setopt NO_NOMATCH
 
 # all of our zsh files
 typeset -U config_files
