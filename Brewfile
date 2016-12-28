@@ -22,6 +22,7 @@ brew 'gpg-agent'
 brew 'httpstat'
 brew 'hub'
 brew 'imagemagick', args: ['with-webp']
+brew 'jq'
 brew 'jp2a'
 brew 'libgit2'
 brew 'maven'

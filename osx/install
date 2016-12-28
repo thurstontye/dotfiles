@@ -3,5 +3,10 @@
 # command line interface to it that we can use to just install everything, so
 # yeah, let's do that.
 
-echo "› sudo softwareupdate -i -a"
-sudo softwareupdate -i -a
+read -p "Update OSX App store software? [y/n]" -n 1 -r </dev/tty
+echo $REPLY
+echo
+if [[ ! $REPLY =~ ^[Nn]$ ]];then
+    echo "› sudo softwareupdate -i -a"
+    sudo softwareupdate -i -a
+fi
