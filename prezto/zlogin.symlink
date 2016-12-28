@@ -16,5 +16,5 @@
 
 # Amooga
 if (( $+commands[cowsay] && $+commands[fortune] )); then
-    fortune -sa | cowsay
+    fortune -s | cowsay
 fi

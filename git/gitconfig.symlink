@@ -86,7 +86,7 @@
         clean = git-lfs clean %f
         smudge = git-lfs smudge %f
         required = true
-[http]
 [user]
 	name = Charlie Briggs
 	email = charlie.briggs@bbc.co.uk
+[http]
