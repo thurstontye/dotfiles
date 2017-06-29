@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+LANG=${2:-en}
+curl wttr.in/$1?lang=$LANG

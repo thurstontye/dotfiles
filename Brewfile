@@ -34,6 +34,7 @@ brew 'pyenv'
 brew 'readline'
 brew 'roundup'
 brew 'stunnel'
+brew 'shellcheck'
 brew 'tmux'
 brew 'unrar'
 brew 'vim', args: ['override-system-vi']

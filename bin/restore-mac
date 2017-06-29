@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+ORIGINAL_MAC="a0:99:9b:0b:b5:cd"
+
+echo "Old Mac: $(ifconfig en0 ether)"
+echo "New Mac: $ORIGINAL_MAC"
+
+sudo ifconfig en0 ether "$ORIGINAL_MAC"
