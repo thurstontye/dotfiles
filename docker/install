@@ -1,2 +1,2 @@
-curl -fLo ~/.zprezto/modules/completion/external/src/_docker \
-https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker
+# curl -fLo ~/.zprezto/modules/completion/external/src/_docker \ 
+# https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker

@@ -1,1 +1,3 @@
-sudo -H pip install -r $ZSH/python/requirements.txt
+sudo easy_install pip
+
+sudo -H pip install -r $(pwd)/python/requirements.txt
