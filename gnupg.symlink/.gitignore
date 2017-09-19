@@ -1,0 +1,6 @@
+*.kbx
+trustdb.gpg
+sshcontrol
+openpgp-revocs*
+private-keys*
+
