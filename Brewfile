@@ -7,6 +7,7 @@ tap 'homebrew/dupes'
 tap 'spotify/public'
 
 brew 'ag'
+brew 'awscli'
 brew 'bash'
 brew 'diff-so-fancy'
 brew 'coreutils'
