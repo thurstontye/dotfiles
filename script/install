@@ -6,9 +6,14 @@ set -e
 
 cd "$(dirname $0)"/..
 
-# Run Homebrew through the Brewfile
-echo "› brew bundle"
-brew bundle
 
-# find the installers and run them iteratively
+if [ "$(uname)" == "Darwin" ]; then
+
+  # Run Homebrew through the Brewfile
+  echo "› brew bundle"
+  brew bundle
+else
+  echo "Non Darwin (Mac OS) system detected, skipping brew installation..."
+fi
+  # find the installers and run them iteratively
 find . -name install -not \( -path "./script/*" -prune \) | while read installer ; do echo "Running $installer" && bash -c "${installer}" ; done
