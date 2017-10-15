@@ -7,11 +7,15 @@ tap 'homebrew/dupes'
 tap 'spotify/public'
 
 brew 'ag'
+brew "ansible"
+brew "ansible-lint"
 brew 'awscli'
 brew 'bash'
 brew 'diff-so-fancy'
 brew 'coreutils'
+brew "doitlive"
 brew 'elm'
+brew 'exa'
 brew 'fasd'
 brew 'findutils'
 brew 'gnu-sed', args: ['default-names']
@@ -20,7 +24,9 @@ brew 'grc'
 brew 'grep'
 brew 'gnupg'
 brew 'gpg-agent'
+brew "heroku"
 brew 'httpstat'
+brew "httpie"
 brew 'hub'
 brew 'imagemagick', args: ['with-webp']
 brew 'python'
@@ -32,6 +38,7 @@ brew 'libgit2'
 brew 'moreutils'
 brew 'node'
 brew 'openssl'
+brew "pgcli"
 brew 'pinentry-mac'
 brew 'pyenv'
 brew 'readline'
@@ -45,6 +52,7 @@ brew 'vim', args: ['override-system-vi']
 brew 'wget', args: ['with-iri']
 brew 'zopfli'
 brew 'zsh'
+
 
 # Just for fun
 brew 'cowsay'
