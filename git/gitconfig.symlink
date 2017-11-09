@@ -88,5 +88,5 @@
         required = true
 [user]
 	name = Charlie Briggs
-	email = charlie.briggs@bbc.co.uk
+	email = charlie.briggs@ft.com
 [http]

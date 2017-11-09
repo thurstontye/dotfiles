@@ -52,18 +52,14 @@ unset config_files
 eval "$(fasd --init auto)"
 
 # link gpg-agent and pinentry
-if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
-  source ~/.gnupg/.gpg-agent-info
-  export GPG_AGENT_INFO
-else
-  eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
-fi
+# if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
+#  source ~/.gnupg/.gpg-agent-info
+#  export GPG_AGENT_INFO
+#else
+#  eval $(gpg-agent --daemon ~/.gnupg/.gpg-agent-info)
+#fi
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
@@ -71,3 +67,10 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # tabtab source for yarn package
 # uninstall by removing these lines or running `tabtab uninstall yarn`
 [[ -f /Users/briggc08/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh ]] && . /Users/briggc08/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/charlie.briggs/Projects/ft/dewey-notifier/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/charlie.briggs/Projects/ft/dewey-notifier/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/charlie.briggs/Projects/ft/dewey-notifier/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/charlie.briggs/Projects/ft/dewey-notifier/node_modules/tabtab/.completions/sls.zsh
