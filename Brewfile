@@ -11,6 +11,7 @@ brew "ansible"
 brew "ansible-lint"
 brew 'awscli'
 brew 'bash'
+brew 'boot-clj'
 brew 'diff-so-fancy'
 brew 'coreutils'
 brew "doitlive"
@@ -36,6 +37,7 @@ brew 'jp2a'
 brew 'kubernetes-cli'
 brew 'kubernetes-helm'
 brew 'libgit2'
+brew 'leiningen'
 # brew 'maven'
 brew 'moreutils'
 brew 'node'
