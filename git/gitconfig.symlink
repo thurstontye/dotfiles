@@ -90,3 +90,7 @@
 	name = Charlie Briggs
 	email = charlie.briggs@ft.com
 [http]
+[credential]
+	helper = store
+[url "https://github.com"]
+	insteadOf = git://github.com
