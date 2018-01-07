@@ -45,6 +45,7 @@ brew 'openssl'
 brew "pgcli"
 brew 'pinentry-mac'
 brew 'pyenv'
+brew 'reattach-to-user-namespace' # https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
 brew 'readline'
 brew 'roundup'
 brew 'stunnel'
