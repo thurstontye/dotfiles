@@ -1,2 +1,2 @@
-glances
 pylint
+cookiecutter
