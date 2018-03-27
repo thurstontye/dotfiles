@@ -3,7 +3,6 @@ cask_args appdir: '/Applications'
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 tap 'homebrew/bundle'
-tap 'homebrew/dupes'
 tap 'spotify/public'
 
 brew 'ag'
