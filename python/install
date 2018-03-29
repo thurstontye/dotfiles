@@ -1,3 +1,3 @@
 sudo easy_install pip
 
-sudo -H pip install -r $(pwd)/python/requirements.txt
+pip install -user -r $(pwd)/python/requirements.txt

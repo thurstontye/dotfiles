@@ -1,3 +1,6 @@
+# Enable to capture load time information
+# zmodload zsh/zprof
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
@@ -37,8 +40,13 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+# only check cache once a day https://gist.github.com/ctechols/ca1035271ad134841284
+autoload -Uz compinit 
+if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
+  compinit;
+else
+  compinit -C;
+fi;
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
@@ -78,3 +86,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/charlie.briggs/.sdkman"
 [[ -s "/Users/charlie.briggs/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/charlie.briggs/.sdkman/bin/sdkman-init.sh"
+
+# Enable to capture load time information
+# zprof

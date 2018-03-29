@@ -46,7 +46,7 @@ There's a few special files in the hierarchy.
 Run this:
 
 ```sh
-git clone https://github.com/holman/dotfiles.git ~/.dotfiles
+git clone --recurse-submodules -j8 https://github.com/limess/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 script/install
