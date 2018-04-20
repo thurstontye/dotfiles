@@ -17,6 +17,7 @@ brew 'elm'
 brew 'exa'
 brew 'fasd'
 brew 'findutils'
+brew 'git'
 brew 'gnu-sed', args: ['default-names']
 brew 'go'
 brew 'grc'
@@ -44,6 +45,7 @@ brew 'nmap' # Security network tool
 brew 'openssl'
 brew "pgcli"
 brew 'pinentry-mac'
+brew 'pipenv'
 brew 'pyenv'
 brew 'reattach-to-user-namespace' # https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
 brew 'readline'
@@ -53,6 +55,7 @@ brew 'shellcheck'
 brew 'tree'
 brew 'tmux'
 brew 'unrar'
+brew 'vault'
 brew 'vim', args: ['override-system-vi']
 brew 'wget', args: ['with-iri']
 brew 'yarn'
