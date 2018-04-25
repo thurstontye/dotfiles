@@ -1,15 +1,44 @@
 ### Language settings
-set status-utf8 on
-set utf8 on
+# set status-utf8 on
+# set utf8 on
 
 ### Shortcut
-set-option -g prefix M-b
+unbind C-b 
+set-option -g prefix ` 
+bind ` send-prefix
+# bind-key ` last-window
 
+# bind | split-window -h
+# bind - split-window -v
+
+bind -n M-Left select-pane -L 
+bind -n M-Right select-pane -R 
+bind -n M-Up select-pane -U 
+bind -n M-Down select-pane -D
 ### Colours
 # set pane colors - hilight the active pane
-set-option -g pane-border-fg black #base02
-set-option -g pane-active-border-f white #base01
+set -g pane-border-bg colour235 
+set -g pane-border-fg colour238 
+set -g pane-active-border-bg colour236 
+set -g pane-active-border-fg colour51
+
+### Indexes
+set -g base-index 1
+
+### Sizing
+setw -g aggressive-resize on
 
 # colorize messages in the command line
+set-window-option -g window-status-current-bg yellow 
 set-option -g message-bg black #base02
 set-option -g message-fg brightred #orange
+
+
+set -g default-terminal "screen-256color"
+
+
+
+set -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'" 
+bind -n WheelDownPane select-pane -t= \; send-keys -M
+
