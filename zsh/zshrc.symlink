@@ -41,6 +41,8 @@ fi
 
 # initialize autocomplete here, otherwise functions won't be loaded
 # only check cache once a day https://gist.github.com/ctechols/ca1035271ad134841284
+autoload bashcompinit
+bashcompinit
 autoload -Uz compinit 
 if [[ -n ${ZDOTDIR}/.zcompdump(#qN.mh+24) ]]; then
   compinit;

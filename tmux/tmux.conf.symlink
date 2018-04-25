@@ -34,7 +34,7 @@ set-option -g message-bg black #base02
 set-option -g message-fg brightred #orange
 
 # Fix OSX pasteboard https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
-set-option -g default-command "reattach-to-user-namespace -l zsh"
+# set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 set -g default-terminal "screen-256color"
 
