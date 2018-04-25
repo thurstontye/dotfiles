@@ -10,3 +10,4 @@ fi;
 
 cd -
 
+xargs yarn global add < $(dirname $0)/packages.txt

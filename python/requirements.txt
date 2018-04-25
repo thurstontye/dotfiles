@@ -4,3 +4,5 @@ awscli
 virtualenv
 cookiecutter
 cfn_flip
+psutil
+glances
