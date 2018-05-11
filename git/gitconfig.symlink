@@ -17,6 +17,7 @@
         untrackedCache = true # https://news.ycombinator.com/item?id=11388479
         excludesfile = ~/.gitignore
         attributesfile = ~/.gitattributes
+	autocrlf = true
 
 [pager]
         # insanely beautiful diffs ==> npm install -g diff-so-fancy
