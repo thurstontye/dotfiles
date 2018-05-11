@@ -15,6 +15,11 @@ bind -n M-Left select-pane -L
 bind -n M-Right select-pane -R 
 bind -n M-Up select-pane -U 
 bind -n M-Down select-pane -D
+
+
+# Plugins
+set -g @plugin 'nhdaly/tmux-better-mouse-mode'
+
 ### Colours
 # set pane colors - hilight the active pane
 set -g pane-border-bg colour235 
@@ -38,6 +43,9 @@ set-option -g message-fg brightred #orange
 
 set -g default-terminal "screen-256color"
 
-set -g mouse on
+set-option -g mouse on
 bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'" 
 bind -n WheelDownPane select-pane -t= \; send-keys -M
+
+# Enable tmux plugin manager https://github.com/tmux-plugins/tpm
+run '~/.tmux/plugins/tpm/tpm'

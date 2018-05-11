@@ -1,0 +1,1 @@
+git -C ~/.tmux/plugins/tpm pull >/dev/null || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
