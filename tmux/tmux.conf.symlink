@@ -31,7 +31,7 @@ set -g pane-active-border-fg colour51
 set -g base-index 1
 
 ### Sizing
-setw -g aggressive-resize on
+# setw -g aggressive-resize on # not compatible with iterm2 tmux integration
 
 # colorize messages in the command line
 set-window-option -g window-status-current-bg yellow 
