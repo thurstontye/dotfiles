@@ -58,14 +58,6 @@ done
 
 unset config_files
 
-# enable fasd https://github.com/clvv/fasd
-fasd_cache="$HOME/.fasd-init-bash" 
-if [ "$(command -v fasd)" -nt "$fasd_cache" -o ! -s "$fasd_cache" ]; then
-  fasd --init posix-alias bash-hook bash-ccomp bash-ccomp-install >| "$fasd_cache"
-fi 
-source "$fasd_cache" 
-unset fasd_cache
-
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -73,19 +65,11 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # tabtab source for yarn package
 # uninstall by removing these lines or running `tabtab uninstall yarn`
-[[ -f /Users/briggc08/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh ]] && . /Users/briggc08/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/charlie.briggs/Projects/ft/dewey-notifier/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/charlie.briggs/Projects/ft/dewey-notifier/node_modules/tabtab/.completions/serverless.zsh
-
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/charlie.briggs/Projects/ft/dewey-notifier/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/charlie.briggs/Projects/ft/dewey-notifier/node_modules/tabtab/.completions/sls.zsh
+[[ -f $HOME/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh ]] && . $HOME/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/charlie.briggs/.sdkman"
-[[ -s "/Users/charlie.briggs/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/charlie.briggs/.sdkman/bin/sdkman-init.sh"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "/$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Enable to capture load time information
 # zprof
