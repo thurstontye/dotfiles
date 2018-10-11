@@ -1,6 +1,10 @@
 # curl -fLo ~/.zprezto/modules/completion/external/src/_docker # https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker
 
-if [[ Linux != 'Linux' ]]; then
+if [[ $(uname -s) != 'Linux' ]]; then
+    exit 0
+fi
+
+if dpkg -s docker-ce >/dev/null; then
     exit 0
 fi
 
