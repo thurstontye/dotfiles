@@ -16,12 +16,15 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   fi
   # Install homebrew
   bash -c $ZSH/homebrew/install 2>&1
+else
+  sudo apt-get update && sudo apt-get install build-essential curl file git
+  bash -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+fi 
 
-  # Upgrade homebrew
-  echo "› brew update"
-  brew update
-fi
 
+# Upgrade homebrew
+echo "› brew update"
+brew update
 
 # Install software
 echo "› $ZSH/script/install"
