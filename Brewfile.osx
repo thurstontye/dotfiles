@@ -11,7 +11,6 @@ brew 'zsh'
 brew 'bash'
 brew 'pinentry-mac'
 
-cask '1password'
 cask 'alfred'
 cask 'burp-suite' # collection of security tools
 cask 'docker'
@@ -49,3 +48,4 @@ brew 'maven'
 brew 'jenv'
 
 mas 'xcode', id: 497799835
+mas '1password', id: 1333542190
