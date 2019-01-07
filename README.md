@@ -43,6 +43,8 @@ There's a few special files in the hierarchy.
 
 ## install
 
+First install [Homebrew](https://brew.sh/). This will be used later to install CLI apps and cask applications (`./script/install`).
+
 Run this:
 
 ```sh
