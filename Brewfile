@@ -3,7 +3,6 @@ tap 'homebrew/bundle'
 brew 'ag'
 brew "ansible"
 brew "ansible-lint"
-brew 'boot-clj'
 brew 'diff-so-fancy'
 brew 'coreutils'
 brew "doitlive"
@@ -20,14 +19,11 @@ brew "httpie"
 brew 'hub'
 brew 'imagemagick', args: ['with-webp']
 brew 'python'
-brew 'jenv'
 brew 'jq'
 brew 'jp2a'
 brew 'kubernetes-cli'
 brew 'kubernetes-helm'
 brew 'libgit2'
-brew 'leiningen'
-# brew 'maven'
 brew 'moreutils'
 brew 'node'
 brew 'nmap' # Security network tool
@@ -46,7 +42,6 @@ brew 'vim', args: ['override-system-vi']
 brew 'wget', args: ['with-iri']
 brew 'yarn'
 brew 'zopfli'
-
 
 # Just for fun
 brew 'cowsay'
