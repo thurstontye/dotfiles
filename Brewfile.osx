@@ -3,7 +3,12 @@ cask_args appdir: '/Applications'
 tap 'caskroom/cask'
 tap 'caskroom/versions'
 
+# Start with mas (Mac App Store) and related software so we get XCode
 brew 'mas'
+
+mas 'xcode', id: 497799835
+mas '1password', id: 1333542190
+
 brew 'git'
 brew 'zsh'
 brew 'tmux'
@@ -46,6 +51,3 @@ brew 'boot-clj'
 brew 'leiningen'
 brew 'maven'
 brew 'jenv'
-
-mas 'xcode', id: 497799835
-mas '1password', id: 1333542190
