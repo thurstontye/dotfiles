@@ -14,7 +14,6 @@ brew 'gnu-sed', args: ['default-names']
 brew 'go'
 brew 'grc'
 brew 'gnupg'
-brew 'gpg-agent'
 brew "heroku"
 brew 'httpstat'
 brew "httpie"
