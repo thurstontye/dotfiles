@@ -43,8 +43,3 @@ brew 'vim', args: ['override-system-vi']
 brew 'wget', args: ['with-iri']
 brew 'yarn'
 brew 'zopfli'
-
-# Just for fun
-brew 'cowsay'
-brew 'fortune'
-
