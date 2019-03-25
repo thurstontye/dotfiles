@@ -77,6 +77,10 @@
 [push]
         default = current
 
+[rebase]
+# squash fixup commits automatically when rebasing interactively
+	autosquash = true
+
 # use separate file for username / github token / etc
 [include]
         path = ~/.gitconfig.local
