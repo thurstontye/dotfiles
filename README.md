@@ -4,7 +4,7 @@ Your dotfiles are how you personalize your system. These are mine.
 
 Realised I should _finally_ have a source controlled set of config files to stop general day to day maintenence being a chore. Tried to get start with Paul Irish's files (https://github.com/paulirish/dotfiles) which looked excellent however I need something a bit more structured to keep me sane.
 
-These files by Holman had my back.
+These files are forked from Zach Holman's original dotfiles - adding antibody as a zsh package manager.
 
 Holman's post on the subject: (http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 

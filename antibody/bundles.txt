@@ -1,15 +1,11 @@
 # Original source via https://github.com/caarlos0/dotfiles/blob/master/antibody/bundles.txt
 
 # this block is in alphabetic order
-caarlos0/ports kind:path
-caarlos0/zsh-git-fetch-merge kind:path
-caarlos0/zsh-git-sync kind:path
-caarlos0/zsh-mkc
-caarlos0/zsh-open-pr kind:path
 mafredri/zsh-async
 rupa/z
 zsh-users/zsh-completions
-zsh-users/zsh-autosuggestions
+# Fish style autosuggestions
+# zsh-users/zsh-autosuggestions
 
 # these should be at last!
 sindresorhus/pure
