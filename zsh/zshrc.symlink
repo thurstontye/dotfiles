@@ -22,7 +22,6 @@ then
   source ~/.localrc
 fi
 
-tell of our zsh files
 typeset -U config_files
 config_files=($DOTFILES/*/*.zsh)
 
