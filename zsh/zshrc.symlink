@@ -15,6 +15,10 @@ then
   source ~/.localrc
 fi
 
+# for some reason USER is not necessarily set on ubuntu
+user=$(whoami)
+export USER="${USER:-$user}"
+
 setopt extendedglob
 setopt NO_NOMATCH
 
