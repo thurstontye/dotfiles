@@ -1,1 +1,2 @@
-alias reload!='. ~/.zshrc'
+#!/bin/sh
+alias reload!='exec "$SHELL" -l'
