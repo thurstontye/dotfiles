@@ -72,7 +72,10 @@ bindkey '^?' backward-delete-char
 
 # delete word with ctrl+backspace
 bindkey '^[[3;5~' backward-delete-word
-# bindkey '^[[3~' backward-delete-word
+bindkey '^[[3~' backward-delete-word
+
+# backwards tab through menus
+bindkey '^[[Z' reverse-menu-complete
 
 # search history with fzf if installed, default otherwise
 if test -d /usr/local/opt/fzf/shell; then
