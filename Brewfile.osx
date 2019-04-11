@@ -1,7 +1,6 @@
 cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
-tap 'caskroom/versions'
 
 # Start with mas (Mac App Store) and related software so we get XCode
 brew 'mas'
