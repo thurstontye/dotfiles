@@ -33,6 +33,8 @@ brew 'pipenv'
 brew 'pyenv'
 brew 'reattach-to-user-namespace' # https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
 brew 'readline'
+# better grep (https://github.com/BurntSushi/ripgrep)
+brew 'ripgrep'
 brew 'roundup'
 brew 'stunnel'
 brew 'shellcheck'
