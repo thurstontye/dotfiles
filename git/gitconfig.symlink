@@ -12,23 +12,20 @@
         d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
 
         reup = rebase-update # depot_tools specific
-
 [core]
-        untrackedCache = true # https://news.ycombinator.com/item?id=11388479
+        # https://news.ycombinator.com/item?id=11388479
+        untrackedCache = true
+
         excludesfile = ~/.gitignore
         attributesfile = ~/.gitattributes
 	autocrlf = false
 	eol = lf
-
 [pager]
-        # insanely beautiful diffs ==> npm install -g diff-so-fancy
+        # use diff-so-fancy for pretty-diffs
 	diff = diff-so-fancy | less --tabs=4 -RFX
 	show = diff-so-fancy | less --tabs=4 -RFX
-
 [interactive]
 	diffFilter = "diff-so-fancy"
-
-# so much color
 [color]
         ui = always
 [color "diff"]
@@ -51,11 +48,11 @@
         added = green
         changed = yellow
         untracked = cyan
-
-# git mergetool
 [merge]
+        # git mergetool
         tool = opendiff
-
+        # present 3 way conflict editor
+        conflictstyle = diff3
 # rewrites of repo paths
 [url "git@github.com:"]
         insteadOf = "gh:"
@@ -68,37 +65,44 @@
         pushInsteadOf = "gist:"
         pushInsteadOf = "git://gist.github.com/"
         pushInsteadOf = "https://gist.github.com/"
-
-# correct typos
-[help]
-        autocorrect = 1
-
-# push easily. http://stackoverflow.com/a/23918418/89484
-[push]
-        default = current
-
-[rebase]
-# squash fixup commits automatically when rebasing interactively
-	autosquash = true
-
-# use separate file for username / github token / etc
-[include]
-        path = ~/.gitconfig.local
-
-[init]
-        # templatedir = ~/.git_template
-
-[filter "lfs"]
-        clean = git-lfs clean %f
-        smudge = git-lfs smudge %f
-        required = true
-[user]
-	name = Charlie Briggs
-	email = charlie.briggs@ft.com
-[http]
-[credential]
-	helper = store
 [url "https://github.com"]
 	insteadOf = git://github.com
 [url "git@github.com:"]
 	insteadOf = https://github.com
+[help]
+        # correct typos
+        autocorrect = 1
+[push]
+        # push easily. http://stackoverflow.com/a/23918418/89484
+        default = current
+[branch]
+        # when a new branch is created, setup git pull to rebase rather than merge
+        autosetuprebase = always
+[rebase]
+        # squash fixup commits automatically when rebasing interactively
+	autosquash = true
+[status]
+        # show all untracked files rather than just the directory containing them
+        showUntrackedFiles = all
+[tag]
+        # Sort tags as version numbers whenever applicable, so 1.10.2 is AFTER 1.2.0.
+        sort = version:refname
+[versionsort]
+        prereleaseSuffix = -pre
+        prereleaseSuffix = .pre
+        prereleaseSuffix = -beta
+        prereleaseSuffix = .beta
+        prereleaseSuffix = -rc
+        prereleaseSuffix = .rc
+[init]
+        # templatedir = ~/.git_template
+[filter "lfs"]
+        clean = git-lfs clean %f
+        smudge = git-lfs smudge %f
+        required = true
+[http]
+[credential]
+	helper = store
+[include]
+        # use separate file for username / github token / gpg keys etc
+        path = ~/.gitconfig.local
