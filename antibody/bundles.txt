@@ -10,6 +10,8 @@ zsh-users/zsh-completions
 
 
 # additional completions
+lukechilds/zsh-better-npm-completion
+# this is super slow so disabled for now
 # robbyrussell/oh-my-zsh path:plugins/aws
 robbyrussell/oh-my-zsh path:plugins/docker
 robbyrussell/oh-my-zsh path:plugins/docker-compose
