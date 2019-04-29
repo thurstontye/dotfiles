@@ -8,7 +8,7 @@ export NODE_REPL_MODE='sloppy';
 
 # lazy load nvm
 # https://github.com/lukechilds/zsh-nvm#lazy-loading
-export NVM_LAZY_LOAD=true
+# export NVM_LAZY_LOAD=true
 # autoload nvm
 # https://github.com/lukechilds/zsh-nvm#auto-use
 export NVM_AUTO_USE=true

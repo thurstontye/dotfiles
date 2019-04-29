@@ -40,7 +40,6 @@ source ~/.zsh_plugins.sh
 
 # load everything but the path and completion files
 for file in ${${config_files:#*/(path|env).zsh}:#*/completion.zsh}; do
-	echo $file
   source "$file"
 done
 
