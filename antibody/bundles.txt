@@ -1,6 +1,7 @@
 # Original source via https://github.com/caarlos0/dotfiles/blob/master/antibody/bundles.txt
 
 # this block is in alphabetic order
+lukechilds/zsh-nvm
 mafredri/zsh-async
 rupa/z
 zsh-users/zsh-completions
