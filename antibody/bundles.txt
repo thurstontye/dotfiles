@@ -15,6 +15,7 @@ lukechilds/zsh-better-npm-completion
 # robbyrussell/oh-my-zsh path:plugins/aws
 robbyrussell/oh-my-zsh path:plugins/docker
 robbyrussell/oh-my-zsh path:plugins/docker-compose
+zchee/zsh-completions path:src/go
 
 # these should be at last!
 sindresorhus/pure
