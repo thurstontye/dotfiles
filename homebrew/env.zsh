@@ -3,6 +3,3 @@ test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew
 
 BREW_PREFIX=$(brew --prefix)
 eval $($BREW_PREFIX/bin/brew shellenv)
-
-export MANPATH="$BREWPATH//share/man:$MANPATH"
-export INFOPATH="$BREWPATH/share/info:$INFOPATH"
