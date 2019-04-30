@@ -6,13 +6,15 @@ set -e
 
 cd "$(dirname $0)"/..
 
-if [ "$(uname)" == "Darwin" ]; then
-  # Run Homebrew through the Brewfile
-  echo "› brew bundle"
+# Run Homebrew through the Brewfile
+echo "› brew bundle"
+brew bundle
 
-  brew bundle
+if [ "$(uname)" == "Darwin" ]; then
   brew bundle --file=Brewfile.osx
 fi
+
+export IS_WSL=$(uname -a | grep -c "Microsoft")
 
 # find the installers and run them iteratively
 find . -name install -not \( -path "./script/*" -prune \) | while read installer ; do echo "Running $installer" && bash -c "${installer}" ; done

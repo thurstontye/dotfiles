@@ -1,3 +1,5 @@
-if [ -f /mnt/c/Projects/ssh-agent-wsl/ssh-agent-wsl ]; then
-	eval $(/mnt/c/Projects/ssh-agent-wsl/ssh-agent-wsl -r)
+if [ -z "$SSH_TTY" ]; then
+	if [ ${IS_WSL} -eq 1 ]; then
+		eval $($PROJECTS/ssh-agent-wsl/ssh-agent-wsl -r)
+	fi
 fi
