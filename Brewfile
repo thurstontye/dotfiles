@@ -17,7 +17,7 @@ brew 'gnupg'
 brew 'httpstat'
 brew "httpie"
 brew 'hub'
-brew 'imagemagick', args: ['with-webp']
+brew 'imagemagick'
 brew 'python'
 brew 'jq'
 brew 'jp2a'
@@ -40,7 +40,7 @@ brew 'shellcheck'
 brew 'tree'
 brew 'unrar'
 brew 'vault'
-brew 'vim', args: ['override-system-vi']
-brew 'wget', args: ['with-iri']
+brew 'vim'
+brew 'wget'
 brew 'yarn'
 brew 'zopfli'
