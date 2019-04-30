@@ -10,7 +10,7 @@ brew "doitlive"
 brew 'exa'
 brew 'fasd'
 brew 'findutils'
-brew 'gnu-sed', args: ['default-names']
+brew 'gnu-sed'
 brew 'go'
 brew 'grc'
 brew 'gnupg'
