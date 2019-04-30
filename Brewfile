@@ -14,7 +14,6 @@ brew 'gnu-sed'
 brew 'go'
 brew 'grc'
 brew 'gnupg'
-brew "heroku"
 brew 'httpstat'
 brew "httpie"
 brew 'hub'
