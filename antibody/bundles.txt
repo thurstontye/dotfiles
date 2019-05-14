@@ -3,7 +3,6 @@
 # this block is in alphabetic order
 lukechilds/zsh-nvm
 mafredri/zsh-async
-rupa/z
 zsh-users/zsh-completions
 # Fish style autosuggestions
 # zsh-users/zsh-autosuggestions
@@ -15,6 +14,7 @@ lukechilds/zsh-better-npm-completion
 # robbyrussell/oh-my-zsh path:plugins/aws
 robbyrussell/oh-my-zsh path:plugins/docker
 robbyrussell/oh-my-zsh path:plugins/docker-compose
+robbyrussell/oh-my-zsh path:plugins/z
 zchee/zsh-completions path:src/go
 
 # these should be at last!
