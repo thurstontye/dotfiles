@@ -60,7 +60,7 @@ bindkey '^[b' backward-word
 bindkey '^[^[[C' forward-word
 bindkey '^[f' forward-word
 
-# to to the beggining/end of line with fn+left/right or home/end
+# to to the beginning/end of line with fn+left/right or home/end
 bindkey "${terminfo[khome]}" beginning-of-line
 bindkey '^[[H' beginning-of-line
 bindkey "${terminfo[kend]}" end-of-line
@@ -71,8 +71,8 @@ bindkey '^[[3~' delete-char
 bindkey '^?' backward-delete-char
 
 # delete word with ctrl+backspace
-bindkey '^[[3;5~' backward-delete-word
-bindkey '^[[3~' backward-delete-word
+bindkey '^[[3;5~' kill-word
+bindkey '^H' backward-kill-word
 
 # backwards tab through menus
 bindkey '^[[Z' reverse-menu-complete
