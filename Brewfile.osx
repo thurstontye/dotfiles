@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
+tap 'getantibody/tap'
 
 # Start with mas (Mac App Store) and related software so we get XCode
 brew 'mas'
