@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
 tap 'getantibody/tap'
+tap 'homebrew/cask-versions'
 
 # Start with mas (Mac App Store) and related software so we get XCode
 brew 'mas'
@@ -22,7 +23,6 @@ cask 'burp-suite' # collection of security tools
 cask 'docker'
 cask 'dropbox'
 cask 'firefox'
-cask 'firefox-developer-edition'
 cask 'flux'
 cask 'google-chrome'
 cask 'google-chrome-canary'
@@ -33,7 +33,6 @@ cask 'java'
 cask 'jetbrains-toolbox'
 cask 'minikube'
 cask 'mysqlworkbench'
-cask 'noti' # Android notifications https://noti.center/
 cask 'owasp-zap' # Security attack proxy
 cask 'private-internet-access'
 cask 'rescuetime'
