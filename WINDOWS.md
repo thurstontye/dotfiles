@@ -31,7 +31,9 @@ VSCode in Windows. Open editors using `code $path` in WSL. Git integration is br
 
 ## Docker
 
-See [Setting Up Docker for Windows and WSL to Work Flawlessly](https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly). Note it's not flawless, as using custom mountpoints seems to break git at the time of writing. Pretty good though
+See [Setting Up Docker for Windows and WSL to Work Flawlessly](https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly). Note it's not flawless, as using custom mountpoints seems to break git at the time of writing. Pretty good though.
+
+If for some reason exposing the Docker daemon without TLS doesn't work in WSL despite being ticked, make sure Windows has not [reserved port 2375](https://github.com/docker/for-win/issues/3546#issuecomment-483311479).
 
 ## ssh-agent
 
