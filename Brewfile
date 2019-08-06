@@ -30,6 +30,7 @@ brew 'nmap' # Security network tool
 brew "pgcli"
 brew 'pipenv'
 brew 'pyenv'
+brew 'pyenv-virtualenv'
 brew 'reattach-to-user-namespace' # https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
 brew 'readline'
 # better grep (https://github.com/BurntSushi/ripgrep)
