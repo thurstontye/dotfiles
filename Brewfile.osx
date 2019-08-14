@@ -18,6 +18,8 @@ brew 'zsh'
 brew 'tmux'
 brew 'bash'
 brew 'pinentry-mac'
+# driver for postgres for use with MySQL Workbench
+brew 'psqlODBC'
 
 cask 'alfred'
 cask 'burp-suite' # collection of security tools
@@ -42,6 +44,8 @@ cask 'safari-technology-preview'
 cask 'slack'
 cask 'sublime-text'
 cask 'spotify'
+cask 'tableplus'
+cask 'tunnelblick'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'whatsapp'

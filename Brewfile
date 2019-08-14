@@ -5,7 +5,9 @@ brew 'ag'
 brew "ansible"
 brew "ansible-lint"
 brew 'diff-so-fancy'
+brew 'candid82/brew/joker'
 brew 'coreutils'
+brew 'clojure'
 brew "doitlive"
 brew 'exa'
 brew 'fasd'
@@ -38,6 +40,7 @@ brew 'ripgrep'
 brew 'roundup'
 brew 'stunnel'
 brew 'shellcheck'
+brew 'tfenv'
 brew 'tree'
 brew 'unrar'
 brew 'vault'
