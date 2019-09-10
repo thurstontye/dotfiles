@@ -6,6 +6,7 @@ brew "ansible"
 brew "ansible-lint"
 brew 'diff-so-fancy'
 brew 'candid82/brew/joker'
+brew 'chamber'
 brew 'coreutils'
 brew 'clojure'
 brew "doitlive"
