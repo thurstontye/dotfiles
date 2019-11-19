@@ -7,8 +7,6 @@ zsh-users/zsh-completions
 # Fish style autosuggestions
 # zsh-users/zsh-autosuggestions
 
-robbyrussell/oh-my-zsh path:plugins/osx
-
 # additional completions
 lukechilds/zsh-better-npm-completion
 # this is super slow so disabled for now

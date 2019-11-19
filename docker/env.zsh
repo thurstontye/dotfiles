@@ -13,6 +13,6 @@ if [ -e /proc/version ] && grep -q Microsoft /proc/version; then
 fi
 
 # podman does not work on WSL
-if [ "$(uname)" != "Darwin" ]; then
+if [ "$(uname)" = "Darwin" ]; then
    alias docker=podman
 fi
