@@ -39,6 +39,7 @@ cask 'minikube'
 cask 'mysqlworkbench'
 cask 'owasp-zap' # Security attack proxy
 cask 'private-internet-access'
+cask 'podman'
 cask 'rescuetime'
 cask 'safari-technology-preview'
 cask 'sensiblesidebuttons'

@@ -32,7 +32,6 @@ brew 'node'
 brew 'nmap' # Security network tool
 brew "pgcli"
 brew 'pipenv'
-brew 'podman'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 brew 'reattach-to-user-namespace' # https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
