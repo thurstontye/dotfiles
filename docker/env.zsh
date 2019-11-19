@@ -11,3 +11,8 @@ if [ -e /proc/version ] && grep -q Microsoft /proc/version; then
     sudo mount --bind /mnt/e /e
   fi
 fi
+
+# podman does not work on WSL
+if [ "$(uname)" != "Darwin" ]; then
+   alias docker=podman
+fi
