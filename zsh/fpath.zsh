@@ -2,3 +2,7 @@
 for topic_folder ($ZSH/*) if [ -d $topic_folder ];
     then fpath=($topic_folder $fpath);
 fi;
+
+if [[ $(command -v brew) != "" ]]; then
+    fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+fi
