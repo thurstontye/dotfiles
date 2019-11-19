@@ -53,7 +53,7 @@ for file in ${${config_files:#*/(path|env).zsh}:#*/completion.zsh}; do
 done
 
 # load every completion after autocomplete loads
-for file in ${(M)config_files:#*/completion.zsh}; do
+for file in ${(M)config_files:#*/completion.zsh/#*/*.completion.zsh}; do
   source "$file"
 done
 
@@ -68,3 +68,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/charlie.briggs/.sdkman"
 [[ -s "/Users/charlie.briggs/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/charlie.briggs/.sdkman/bin/sdkman-init.sh"
+
+export YVM_DIR=/Users/charlie.briggs/.yvm
+[ -r $YVM_DIR/yvm.sh ] && . $YVM_DIR/yvm.sh

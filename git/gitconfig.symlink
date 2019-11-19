@@ -50,9 +50,9 @@
         untracked = cyan
 [merge]
         # git mergetool
-        tool = opendiff
+	# tool = opendiff
         # present 3 way conflict editor
-        conflictstyle = diff3
+	# conflictstyle = diff3
 # rewrites of repo paths
 [url "git@github.com:"]
         insteadOf = "gh:"
@@ -73,7 +73,7 @@
         # correct typos
         autocorrect = 1
 [push]
-        # push easily. http://stackoverflow.com/a/23918418/89484
+       # push easily. http://stackoverflow.com/a/23918418/89484
         default = current
 [branch]
         # when a new branch is created, setup git pull to rebase rather than merge
