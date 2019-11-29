@@ -48,6 +48,7 @@ if [ $(date +'%j') != $updated_at ]; then
 else
   compinit -C -i
 fi
+autoload -U +X bashcompinit && bashcompinit
 
 # load antibody plugins
 source ~/.zsh_plugins.sh
