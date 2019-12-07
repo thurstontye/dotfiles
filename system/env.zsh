@@ -10,3 +10,7 @@ export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
 
 ulimit -n 9999
+
+alias ls=exa
+alias cat="bat --theme=\$(defaults read -globalDomain AppleInterfaceStyle &> /dev/null && echo default || echo GitHub)"
+alias grep=rg

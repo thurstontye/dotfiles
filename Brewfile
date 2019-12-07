@@ -4,6 +4,7 @@ tap 'heroku/brew'
 brew 'ag'
 brew "ansible"
 brew "ansible-lint"
+brew 'bat' # cat alternative https://github.com/sharkdp/bat
 brew 'diff-so-fancy'
 brew 'candid82/brew/joker'
 brew 'chamber'

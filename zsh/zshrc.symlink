@@ -48,12 +48,13 @@ if [ $(date +'%j') != $updated_at ]; then
 else
   compinit -C -i
 fi
+autoload -U +X bashcompinit && bashcompinit
 
 # load antibody plugins
 source ~/.zsh_plugins.sh
 
 # load every completion after autocomplete loads
-for file in ${(M)config_files:#*/completion.zsh}; do
+for file in ${(M)config_files:#*/completion.zsh/#*/*.completion.zsh}; do
   source "$file"
 done
 
