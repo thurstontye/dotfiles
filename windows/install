@@ -1,11 +1,7 @@
-# wsl ssh-agent. Uses Windows OpenSSH port
-# https://github.com/rupor-github/ssh-agent-wsl
-
 if [ ${IS_WSL} -eq 1 ]; then
-	echo "Installing ssh-agent-wsl"
-	(
-		cd $PROJECTS
-		mkdir -p ssh-agent-wsl
-		curl https://github.com/rupor-github/ssh-agent-wsl/archive/v2.2.tar.gz | tar xz
-	)
+	sudo apt-get update && \
+	sudo apt-get upgrade && \
+	sudo apt-get dist-upgrade && \
+	sudo apt-get install -y \
+		keychain
 fi
