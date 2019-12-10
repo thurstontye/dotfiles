@@ -13,3 +13,6 @@ function npm_install {
     fi
 }
 alias ni=npm_install
+alias nvm=fnm
+
+

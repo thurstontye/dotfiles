@@ -65,3 +65,5 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Enable to capture load time information
 # zprof
+# fnm
+eval "$(fnm env --multi)"

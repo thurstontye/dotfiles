@@ -1,7 +1,6 @@
 # Original source via https://github.com/caarlos0/dotfiles/blob/master/antibody/bundles.txt
 
 # this block is in alphabetic order
-lukechilds/zsh-nvm
 mafredri/zsh-async
 zsh-users/zsh-completions
 # Fish style autosuggestions

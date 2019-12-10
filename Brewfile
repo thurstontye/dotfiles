@@ -14,6 +14,7 @@ brew "doitlive"
 brew 'exa'
 brew 'fasd'
 brew 'findutils'
+brew 'Schniz/tap/fnm' # nvm alternative to manage node versions
 brew 'gnu-sed'
 brew 'go'
 brew 'grc'
