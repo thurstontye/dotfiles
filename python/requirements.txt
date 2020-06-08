@@ -1,7 +1,6 @@
 pylint
 black
 pep8
-awscli
 virtualenv
 cookiecutter
 cfn_flip
