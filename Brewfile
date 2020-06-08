@@ -1,12 +1,14 @@
 tap 'homebrew/bundle'
 tap 'heroku/brew'
+tap 'Schniz/tap' # fnm
+tap 'candid82/brew' # joker
 
 brew 'ag'
 brew "ansible"
 brew "ansible-lint"
 brew 'bat' # cat alternative https://github.com/sharkdp/bat
 brew 'diff-so-fancy'
-brew 'candid82/brew/joker'
+brew 'joker'
 brew 'chamber'
 brew 'coreutils'
 brew 'clojure'
@@ -14,7 +16,7 @@ brew "doitlive"
 brew 'exa'
 brew 'fasd'
 brew 'findutils'
-brew 'Schniz/tap/fnm' # nvm alternative to manage node versions
+brew 'fnm' # nvm alternative to manage node versions
 brew 'gnu-sed'
 brew 'go'
 brew 'grc'
@@ -36,7 +38,6 @@ brew "pgcli"
 brew 'pipenv'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
-brew 'reattach-to-user-namespace' # https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
 brew 'readline'
 # better grep (https://github.com/BurntSushi/ripgrep)
 brew 'ripgrep'
