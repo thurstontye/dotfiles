@@ -14,7 +14,8 @@ if [ "$(uname)" == "Darwin" ]; then
   brew bundle --file=Brewfile.osx
 fi
 
-export IS_WSL=$(uname -a | grep -c "Microsoft")
+# set IS_WSL variable for install scripts as we haven't setup our shell yet to add it
+export IS_WSL=$(uname -a | grep -i -c "microsoft")
 
 # find the installers and run them iteratively
 find . -name install -not \( -path "./script/*" -prune \) | while read installer ; do echo "Running $installer" && bash -c "${installer}" ; done

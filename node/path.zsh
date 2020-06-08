@@ -1,1 +1,1 @@
-export PATH="./node_modules/.bin:$HOME/.yarn/bin:$PATH"
+export PATH="./node_modules/.bin:$HOME/.yarn/bin:$PATH:$HOME/.fnm"

@@ -63,12 +63,5 @@ unset config_files updated_at
 # load iterm2 shell integration if iterm2 exists
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# load fnm
-eval "$(fnm env --multi)"
-
 # Enable to capture load time information
 # zprof
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/charlie_briggs/.sdkman"
-[[ -s "/home/charlie_briggs/.sdkman/bin/sdkman-init.sh" ]] && source "/home/charlie_briggs/.sdkman/bin/sdkman-init.sh"
