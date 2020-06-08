@@ -18,6 +18,7 @@ brew 'heroku'
 brew 'reattach-to-user-namespace' # https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
 brew 'tmux'
 brew 'bash'
+brew 'Schniz/tapfnm' # nvm alternative to manage node versions
 brew 'pinentry-mac'
 # driver for postgres for use with MySQL Workbench
 brew 'psqlODBC'

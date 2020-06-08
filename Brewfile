@@ -1,6 +1,5 @@
 tap 'homebrew/bundle'
 tap 'heroku/brew'
-tap 'Schniz/tap' # fnm
 tap 'candid82/brew' # joker
 
 brew 'ag'
@@ -16,7 +15,6 @@ brew "doitlive"
 brew 'exa'
 brew 'fasd'
 brew 'findutils'
-brew 'fnm' # nvm alternative to manage node versions
 brew 'gnu-sed'
 brew 'go'
 brew 'grc'

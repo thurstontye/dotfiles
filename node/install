@@ -1,1 +1,4 @@
 xargs yarn global add < $(dirname $0)/packages.txt
+
+echo "Installing fnm"
+curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash -s -- --skip-shell

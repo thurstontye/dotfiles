@@ -9,3 +9,10 @@ private
 .vim/viminfo
 .vim/swaps/*
 .vim/undo
+
+Brewfile.lock.json
+
+.fnm
+
+# binaries
+bin/antibody
