@@ -22,6 +22,7 @@ brew 'pinentry-mac'
 # driver for postgres for use with MySQL Workbench
 brew 'psqlODBC'
 brew 'zsh'
+brew 'vault'
 
 cask 'alfred'
 cask 'burp-suite' # collection of security tools
