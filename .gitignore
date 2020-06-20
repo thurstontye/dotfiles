@@ -10,9 +10,11 @@ private
 .vim/swaps/*
 .vim/undo
 
-Brewfile.lock.json
+*.lock.json
 
 .fnm
 
 # binaries
 bin/antibody
+
+

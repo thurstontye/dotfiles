@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+
+
+if [ -d "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk" ]; then
+    jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+fi
+
+if [ -d "/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk" ]; then
+    jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home
+fi
