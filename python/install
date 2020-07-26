@@ -1,10 +1,12 @@
+#!/usr/bin/env zsh
+
 if [[ $(uname -s) == "Linux" ]]; then
   if ! dpkg -s python-setuptools &> /dev/null; then
     sudo apt-get update && sudo apt-get install -y python-setuptools python3-pip 
-    sudo python /usr/lib/python3.2/dist-packages/easy_install.py pip
   fi
 else
   sudo easy_install pip
 fi
 
+export PATH="$(pyenv root)/libexec/pyenv:$PATH"
 python3 -m pip install --user -r $(pwd)/python/requirements.txt
