@@ -128,6 +128,13 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 #sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
 
+
+# Disable Gatekeeper
+# Allow apps from anywhere, not just Mac App store
+sudo spctl --master-disable
+sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################

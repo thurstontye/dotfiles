@@ -6,6 +6,6 @@ eval "$(jenv init -)"
 
 if [ -f /usr/libexec/java_home ]; then
 	JENV_VERSION_NAME=$(jenv version-name)
-	export JAVA_HOME="$(/usr/libexec/java_home -v $JENV_VERSION_NAME))"
+	export JAVA_HOME="$(/usr/libexec/java_home -v $JENV_VERSION_NAME)"
 fi
 
