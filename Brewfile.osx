@@ -29,7 +29,7 @@ brew 'zsh'
 brew 'vault'
 
 cask 'alfred'
-cask 'docker'
+cask 'docker-edge'
 cask 'dropbox'
 cask 'firefox'
 cask 'flux'
